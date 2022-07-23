@@ -1,10 +1,10 @@
-# [toc] html
+# html
 
-## [toc]一、定义
+## 一、定义
 
 HTML，全称“Hyper Text Markup Language（超文本标记语言）”，简单来说，网页就是用HTML语言制作的。[html5参考手册：](./html5中文手册)
 
-## [toc]二、html基本结构
+## 二、html基本结构
 
 ``` html
 <!DOCTYPE html>
@@ -18,13 +18,13 @@ HTML，全称“Hyper Text Markup Language（超文本标记语言）”，简�
 </html>
 ```
 
-## [toc]三、html的基本标签
+## 三、html的基本标签
 
-### [toc]（1）HTML标签
+### （1）HTML标签
 
 整个网页以<html></html>标签为起止。
 
-### [toc]（2）head标签
+### （2）head标签
 
 head标签代表页面的头部，定义一些特殊内容，一般为浏览器页面不可见内容。
 
@@ -37,13 +37,13 @@ head标签代表页面的头部，定义一些特殊内容，一般为浏览器�
 | <script></script>  | 定义脚本语言                         |
 | <base></base>      | 定义页面所有链接的基础定位（很少用） |
 
-### [toc]（3）body标签
+### （3）body标签
 
 body标签代表页面的身体，定义网页的展示内容，一般都是浏览器可见的。以下标签都使用在body中。
 
-## [toc]3、段落和文字
+## 3、段落和文字
 
-### [toc]（一）、段落标签
+### （一）、段落标签
 
 ##### （1）段落与文字标签
 
