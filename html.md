@@ -30,12 +30,12 @@ head标签代表页面的头部，定义一些特殊内容，一般为浏览器�
 
 | <head>标签内部标题 | 说明                                 |
 | ------------------ | ------------------------------------ |
-| <title></title>    | 定义网页标题                         |
-| <meta></meta>      | 定义网页基本信息（供搜索引擎搜索）   |
-| <style></style>    | 定义css样式                          |
-| <link></link>      | 链接外部css文件或脚本文件            |
-| <script></script>  | 定义脚本语言                         |
-| <base></base>      | 定义页面所有链接的基础定位（很少用） |
+| <title>            | 定义网页标题                         |
+| <meta>             | 定义网页基本信息（供搜索引擎搜索）   |
+| <style>            | 定义css样式                          |
+| <link>             | 链接外部css文件或脚本文件            |
+| <script>           | 定义脚本语言                         |
+| <base>             | 定义页面所有链接的基础定位（很少用） |
 
 ### （3）body标签
 
@@ -47,24 +47,24 @@ body标签代表页面的身体，定义网页的展示内容，一般都是浏�
 
 ##### （1）段落与文字标签
 
-| 标签          | 语义            | 说明             |
-| ------------- | --------------- | ---------------- |
-| <h1>~<h6>     | header          | 标题             |
-| <p></p>       | paragraph       | 段落             |
-| <br>          | break           | 换行             |
-| <hr>          | horizontal rule | 水平线           |
-| <div></div>   | division        | 分割（块元素）   |
-| <span></span> | span            | 区域（行内元素） |
+| 标签      | 语义            | 说明             |
+| --------- | --------------- | ---------------- |
+| <h1>~<h6> | header          | 标题             |
+| <p>       | paragraph       | 段落             |
+| <br>      | break           | 换行             |
+| <hr>      | horizontal rule | 水平线           |
+| <div>     | division        | 分割（块元素）   |
+| <span>    | span            | 区域（行内元素） |
 
 ##### （2）文本格式化标签
 
-| 标签              | 语义          | 说明 |
-| ----------------- | ------------- | ---- |
-| <strong></strong> | strong        | 加粗 |
-| <em></em>         | emphasize     | 斜体 |
-| <cite></cite>     | cite          | 引用 |
-| <sup></sup>       | superscriprtd | 上标 |
-| <sub></sub>       | subscripted   | 下标 |
+| 标签     | 语义          | 说明 |
+| -------- | ------------- | ---- |
+| <strong> | strong        | 加粗 |
+| <em>     | emphasize     | 斜体 |
+| <cite>   | cite          | 引用 |
+| <sup>    | superscriprtd | 上标 |
+| <sub>    | subscripted   | 下标 |
 
 ### （二）、网页特殊符号
 
@@ -82,7 +82,7 @@ HTML标签分为“一般标签”和“自闭合标签”两种。一般标签�
 
 ##### （1）一般标签
 
-如：<html></html>
+如：<html>
 
 ##### （2）自闭合标签
 
@@ -107,6 +107,29 @@ HTML标签分为“一般标签”和“自闭合标签”两种。一般标签�
 常见行内元素有：strong、em、span等。
 
 ### （五）、应用
+
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TheTitle</title>
+</head>
+<body>
+    <h1>这是h1标签</h1>
+    <hr>
+    <h2>这是个h2标签</h2>
+    <p>这里是一段文字</p>
+    <hr>
+    <p>no pain,no gain</p>
+    <hr>
+    <p>H<sub>2</sub>O</p>
+    <p>a<sup>2</sup>+b<sup>2</sup>=1</p>
+</body>
+</html>
+```
+
+运行结果如下：![示例图片](./imgs/ba01.png)
 
 ### （六）、标签的语义
 
@@ -156,7 +179,11 @@ HTML标签分为“一般标签”和“自闭合标签”两种。一般标签�
 
 ### （二）、设置滚动条scrolling
 
+## 12、div标签和span标签
 
+## 13、id属性和class属性
+
+## 14、语义化
 
 
 
