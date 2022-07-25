@@ -165,7 +165,12 @@ HTML标签分为“一般标签”和“自闭合标签”两种。一般标签�
 | input    | input                  | 输入框               |
 | select   | select                 | 选择列表             |
 | option   | option                 | 下拉列表的选项       |
-| iframe   | inline frame           | 内联框架             |
+| header   | header                 | 头部标签             |
+| nav      | navigation             | 导航标签             |
+| article  | article                | 内容标签             |
+| section  | section                | 块级标签             |
+| aside    | aside                  | 侧边栏标签           |
+| footer   | footer                 | 尾部标签             |
 
 ## 5、列表
 
@@ -438,17 +443,27 @@ target的常用属性值如下表所示：
 
 input标签的type属性值：
 
-| type属性值 | 说明               |
-| ---------- | ------------------ |
-| text       | 单行文本框         |
-| password   | 密码文本框         |
-| button     | 按钮               |
-| reset      | 重置按钮           |
-| image      | 图片形式的提交按钮 |
-| radio      | 单选按钮           |
-| checkbox   | 复选框             |
-| hidden     | 隐藏字段           |
-| file       | 文件上传           |
+| type属性值 | 说明                        |
+| ---------- | --------------------------- |
+| text       | 单行文本框                  |
+| password   | 密码文本框                  |
+| button     | 按钮                        |
+| reset      | 重置按钮                    |
+| image      | 图片形式的提交按钮          |
+| radio      | 单选按钮                    |
+| checkbox   | 复选框                      |
+| hidden     | 隐藏字段                    |
+| file       | 文件上传                    |
+| email      | 限制用户输入必须为email类型 |
+| url        | 用户必须输入url类型         |
+| date       | 用户必须输入日期类型        |
+| time       | 用户必须输入时间类型        |
+| month      | 用户必须输入月类型          |
+| week       | 用户必须输入周类型          |
+| number     | 用户必须输入数字类型        |
+| tel        | 手机号码                    |
+| search     | 搜索框                      |
+| color      | 生成一个颜色选择表单        |
 
 应用：
 
@@ -492,27 +507,94 @@ input标签的type属性值：
 
 ### （二）、testarea标签表单
 
+语法：`<textarea rows=:"行数" cols="列数">多行文本框的内容</textarea>`
+
 ### （三）、select和option
 
-### （四）、应用
+下拉列表由`<select>`标签和`<option>`标签配合使用。
+
+语法：
+
+``` html
+    <select name="sel" id="sel">
+        <option value="op1" selected>选项内容1</option>
+        <option value="op2">选项内容2</option>
+        <option value="op3">选项内容3</option>
+    </select>
+```
+
+运行结果如下：![图7](./imgs/ba07.png)
 
 ## 10、多媒体
 
-### （一）、插入音视频和flash
+### （一）、插入音视频
 
-### （二）、插入背景音乐
+#### 1、音频
 
-## 11、浮动框架iframe
+标签：audio。
 
-### （一）、简介
+* 可以在不使用标签的情况下，也能够原生的支持音频格式文件的播放。
+* 播放格式是有限的
 
-### （二）、设置滚动条scrolling
+audio目前支持的音频格式：
 
-## 12、div标签和span标签
+| 格式       | IE9  | Firefox3.5 | Opera | Chrome3.0 | Safari |
+| ---------- | ---- | ---------- | ----- | --------- | ------ |
+| Ogg Vorbis |      | √          | √     | √         |        |
+| MP3        | √    |            |       | √         | √      |
+| Wav        |      | √          | √     |           | √      |
 
-## 13、id属性和class属性
+语法：`<audio src="要播放音频的URL"></audio>`
 
-## 14、语义化
+audio标签的参数：
 
+| 属性     | 值       | 描述                                             |
+| -------- | -------- | ------------------------------------------------ |
+| autoplay | autoplay | 如果出现该属性，则视频在就绪后马上播放           |
+| controls | controls | 如果出现该标签，则向用户显示播放控件，如播放按钮 |
+| loop     | loop     | 如果出现该属性，则每当音频播放结束时重新开始播放 |
+| src      | url      | 要播放的音频的URL                                |
 
+#### 2、视频
 
+标签：video
+
+video标签目前支持三种格式
+
+| 格式  | IE9  | Firefox3.5 | Opera | Chrome | Safari |
+| ----- | ---- | ---------- | ----- | ------ | ------ |
+| Ogg   | No   | 3.5+       | 10.5+ | 5.0+   | No     |
+| MPEG4 | 9.0+ | No         | No    | 5.0+   | 3.0+   |
+| WebM  | No   | 4.0+       | 10.6+ | 6.0+   | No     |
+
+语法：`<video src="视频的url" controls></video>`
+
+video标签的属性：
+
+| 属性     | 值                                    | 描述                                              |
+| -------- | ------------------------------------- | ------------------------------------------------- |
+| autoplay | autoplay                              | 视频就绪后自动播放（chrome需要配合muted属性使用） |
+| controls | controls                              | 向用户显示播放控件                                |
+| width    | pixels（像素）                        | 设置播放器宽度                                    |
+| height   | pixels                                | 设置播放器高度                                    |
+| loop     | loop                                  | 播放完循环播放                                    |
+| preload  | auto(预先加载视频)/none(不应加载视频) | 规定是否预加载视频（有autoplay就忽略）            |
+| src      | url                                   | 视频url地址                                       |
+| poster   | Imgurl                                | 加载等待的画面图片                                |
+| muted    | muted                                 | 静音播放                                          |
+
+#### 3、多媒体标签总结
+
+* 音频标签与视频标签使用基本一致
+* 多媒体标签在不同浏览器下情况不同，存在兼容性问题
+* 谷歌浏览器把音频和视频标签的自动播放都禁止了
+* 谷歌浏览器中视频添加 muted 标签可以自己播放
+
+## 11、语义化
+
+h5中新增了很多语义化标签，如header、nav、article等。
+
+* 语义化标签主要针对搜索引擎
+* 新标签可以使用一次或者多次
+* 在 `IE9` 浏览器中，需要把语义化标签都转换为块级元素
+* 语义化标签，在移动端支持比较友好
